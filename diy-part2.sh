@@ -17,6 +17,6 @@ sed -i 's/192.168.1.1/192.168.10.50/g' package/base-files/files/bin/config_gener
 rm -rf package/openwrt-packages/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/openwrt-packages/luci-theme-argon
 
-#编译新版Sing-box和hysteria，需golang版本1.20或者以上版本
+#编译passwall新版Sing-box和hysteria，需golang版本1.20或者以上版本
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/danta926/golang.git feeds/packages/lang/golang
