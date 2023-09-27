@@ -38,6 +38,10 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+    - name: Check usage01
+      if: (!cancelled())
+      run: df -hT
+    
     - name: Free Disk Space (Ubuntu)
       uses: jlumbroso/free-disk-space@main
       with:
@@ -52,6 +56,10 @@ jobs:
         haskell: true
         large-packages: true
         swap-storage: true
+
+    - name: Check usage02
+      if: (!cancelled())
+      run: df -hT
     
     - name: Checkout
       uses: actions/checkout@main
